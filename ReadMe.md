@@ -4,6 +4,8 @@ This is a Java practice project that simulates a **basic banking system** using 
 
 ---
 
+## To start the assessment create a branch or clone the repo...Don't push to main##
+
 ## ⏱ Duration
 
 **Estimated Time:** 120 minutes  

@@ -72,4 +72,28 @@ public class BankingService {
             throw new RuntimeException(e.getMessage());
         }
     }
+
+    public boolean transfer(String customerIdFrom, Account accFrom, String customerIdTo, Account accTo, int amountInCents) {
+        try {
+            int currentBalance = accFrom.getBalance();
+            if (currentBalance >= amountInCents) {
+                accFrom.withdraw(amountInCents);
+                accTo.deposit(amountInCents);
+                return true;
+            }
+            return false;
+        } catch (Exception e) {
+            throw new RuntimeException(e.getMessage());
+        }
+    }
+
+    public void printCustomerAccount(String customerId) {
+        for (Customer customer : customers) {
+            if (customer.getCustomerId().equals(customerId)) {
+                for (Account account : customer.getAccounts()) {
+                    account.displayInfo();
+                }
+            }
+        }
+    }
 }

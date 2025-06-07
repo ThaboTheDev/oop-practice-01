@@ -6,6 +6,7 @@ public abstract class Account {
     public abstract void displayInfo();
 
     public Account() {
+        accountNumber = "1";
     }
      public boolean deposit(int amountInCents) {
         this.balance += amountInCents;

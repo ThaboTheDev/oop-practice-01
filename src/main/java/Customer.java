@@ -11,7 +11,7 @@ public class Customer {
 
     public Customer(String name) {
         this.name =name;
-        UID id = new UID();
+        this.customerId = "1";
     }
     public boolean addAccount(Account account) {
         if (!this.accounts.contains(account)) {
